@@ -1,0 +1,77 @@
+<form>
+  <label>PVS Dashboard</label>
+  <description/>  
+        <fieldset autoRun="true">
+                <input type="time">
+                        <default>Last 4 hours</default>
+                </input>
+        </fieldset>
+  <row>
+<single>
+  <searchString>
+    eventtype=pvs | stats count as realtime_events
+  </searchString>
+  <title>Total Real-time events</title>
+  <option name="afterLabel">total events</option>
+  <option name="beforeLabel">Found</option>
+  <option name="drilldown">all</option>
+</single>
+<single>
+  <searchString>
+    eventtype=pvs | stats distinct_count(PVS_eventname)
+  </searchString>
+  <title>Unique Real-time events</title>
+  <option name="afterLabel">total unique events</option>
+  <option name="beforeLabel">Found</option>
+  <option name="drilldown">all</option>
+</single>
+  </row>
+  <row>
+    <chart>
+      <searchString>eventtype="pvs" | top limit=10 PVS_eventname</searchString>
+      <title>Top 10 Events</title>
+      <option name="charting.axisTitleX.text">PVS Event Name</option>
+      <option name="charting.axisTitleY.text"/>
+      <option name="charting.chart">bar</option>
+      <option name="charting.chart.nullValueMode">gaps</option>
+      <option name="charting.chart.stackMode">default</option>
+      <option name="charting.layout.splitSeries">false</option>
+      <option name="charting.legend.placement">none</option>
+      <option name="charting.primaryAxisTitle.text"/>
+      <option name="charting.secondaryAxisTitle.text"/>
+      <option name="count">10</option>
+      <option name="displayRowNumbers">true</option>
+    </chart>
+    <chart>
+      <searchString>eventtype="pvs" | timechart count by PVS_eventname usenull=f</searchString>
+      <title>Event Trend</title>
+      <option name="charting.axisTitleX.text">Date / Time</option>
+      <option name="charting.axisTitleY.text"/>
+      <option name="charting.chart">area</option>
+      <option name="charting.chart.nullValueMode">gaps</option>
+      <option name="charting.chart.stackMode">default</option>
+      <option name="charting.layout.splitSeries">false</option>
+      <option name="charting.legend.placement">right</option>
+      <option name="charting.primaryAxisTitle.text"/>
+      <option name="charting.secondaryAxisTitle.text"/>
+      <option name="count">10</option>
+      <option name="displayRowNumbers">true</option>
+    </chart>
+  </row>
+  <row>
+    <chart>
+      <searchString>eventtype="pvs" | top limit=10 src</searchString>
+      <title>Top Source IP</title>
+      <option name="charting.chart">bar</option>
+      <option name="charting.legend.placement">none</option>
+      <option name="count">10</option>
+      <option name="displayRowNumbers">true</option>
+    </chart>
+    <table>
+      <searchString>eventtype="pvs" | top limit=10 PVS_eventname,PVS_pluginid</searchString>
+      <title>Top Event Name</title>
+      <option name="count">10</option>
+      <option name="displayRowNumbers">true</option>
+    </table>
+  </row>
+</form>

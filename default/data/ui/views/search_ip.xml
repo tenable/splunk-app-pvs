@@ -1,0 +1,36 @@
+<form>
+	<label>Search for an IP Address or Event</label>
+
+	<fieldset autoRun="true">
+		<input type="text" token="ipaddr">
+			<label>IP Address</label>
+			<default>*</default>
+		</input>
+		<input type="text" token="eventname">
+			<label>PVS Eventname</label>
+			<default>*</default>
+		</input>
+		<input type="text" token="plugin">
+			<label>PVS PluginID</label>
+			<default>*</default>
+		</input>
+		<input type="time">
+			<default>Last 60 minutes</default>
+		</input>
+	</fieldset>
+
+	<row>
+		<chart>
+			<title>Events: $eventname$ / $ipaddr$</title>
+			<searchString><![CDATA[eventtype="pvs" PVS_eventname="$eventname$" PVS_pluginid="$plugin$" (src_ip="$ipaddr$" OR dest_ip="$ipaddr$") | timechart count by PVS_eventname]]></searchString>
+			<option name="charting.chart">area</option>
+			<option name="charting.chart.stackMode">stacked</option>
+		</chart>
+	</row>
+	<row>
+		<event>
+			<title>Events: $eventname$ / $ipaddr$</title>
+			<searchString><![CDATA[eventtype="pvs" PVS_eventname="$eventname$" PVS_pluginid="$plugin$" (src_ip="$ipaddr$" OR dest_ip="$ipaddr$")|head 100]]></searchString>
+		</event>
+	</row>
+</form>	

@@ -1,0 +1,16 @@
+<nav color="#003763" logo="appLogo.png">
+    <view name="search"/>
+    <collection label="Dashboards">
+        <view name="pvs_dashboard" default='true' />
+        <view name="pvs_traffic_overview" />
+        <view name="pvs_dashboard_maps" />
+        <divider />
+        <view name="search_ip" />
+    </collection>
+    <collection label="Saved Searches">
+        <saved source="unclassified" /> 
+    </collection>
+    <collection label="Help">
+	<view name="getting_started" />
+    </collection>
+</nav>

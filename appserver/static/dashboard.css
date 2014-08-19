@@ -1,0 +1,26 @@
+
+.appLogo {
+    height: 40px;
+    width: 148px;
+    padding-right: 1px;
+    float: left;
+    background: url("appLogo.png") no-repeat 0 0;
+}
+
+.AppBar a {
+ /*   color: #DADFE1 !important; */
+}
+
+.appHeaderWrapper h1 {
+    color: #eeeff0;
+}
+
+.appHeaderWrapper {
+    background-color: #425363;
+    /* tenable gray 425363*/
+    /* tenable blue 003763*/
+}
+
+div.AccountBar {
+    background-color: #425363;
+}
