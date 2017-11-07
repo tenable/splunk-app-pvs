@@ -1,5 +1,5 @@
 <form>
-  <label>PVS Traffic Overview</label>
+  <label>NNM Traffic Overview</label>
   <description/>
         <fieldset autoRun="true">
                 <input type="time">
@@ -9,14 +9,14 @@
   <row>
     <chart>
       <searchString>
-      eventtype="pvs" | eval service_name=dest_port."/".dest_svc | top service_name
+      eventtype=nnm OR eventtype=pvs | eval service_name=dest_port."/".dest_svc | top service_name
       </searchString>
       <title>Top Destination Port</title>
       <option name="charting.chart">pie</option>
     </chart>
     <chart>
       <searchString>
-      eventtype="pvs" | eval service_name=src_port."/".src_svc | top service_name
+      eventtype=nnm OR eventtype=pvs | eval service_name=src_port."/".src_svc | top service_name
       </searchString>
       <title>Top Source Port</title>
       <option name="charting.chart">pie</option>
@@ -25,7 +25,7 @@
   <row>
     <table>
       <searchString>
-      eventtype="pvs" | top dest
+      eventtype=nnm OR eventtype=pvs | top dest
       </searchString>
       <title>Top Destination IP</title>
       <option name="count">10</option>
@@ -33,7 +33,7 @@
     </table>
     <table>
       <searchString>
-      eventtype="pvs" | top src limit=10
+      eventtype=nnm OR eventtype=pvs | top src limit=10
       </searchString>
       <title>Top Source IP</title>
       <option name="count">10</option>

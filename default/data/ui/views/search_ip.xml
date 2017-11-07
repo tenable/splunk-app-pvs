@@ -7,11 +7,11 @@
 			<default>*</default>
 		</input>
 		<input type="text" token="eventname">
-			<label>PVS Eventname</label>
+			<label>NNM Eventname</label>
 			<default>*</default>
 		</input>
 		<input type="text" token="plugin">
-			<label>PVS PluginID</label>
+			<label>NNM PluginID</label>
 			<default>*</default>
 		</input>
 		<input type="time">

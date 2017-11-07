@@ -9,8 +9,8 @@
   <row>
     <map>
       <title>Source IP Map</title>
-      <searchString>eventtype=pvs | iplocation src | geostats count </searchString>
-      <option name="height">400px</option>
+      <searchString>eventtype=nnm OR eventtype=pvs | iplocation src | geostats count </searchString>
+      <option name="height">400</option>
       <!-- use custom colors -->
       <option name="mapping.seriesColors">[0x9ac23c,0xf7902b,0x956d95,0x6ab7c7,0xd85d3c,0xfac51c,0xdd86af]</option>
       <!-- adjust marker opacity and size range -->
@@ -23,8 +23,8 @@
     </map>
     <map>
       <title>Destination IP Map</title>
-      <searchString>eventtype=pvs | iplocation dest | geostats count</searchString>
-      <option name="height">400px</option>
+      <searchString>eventtype=nnm OR eventtype=pvs | iplocation dest | geostats count</searchString>
+      <option name="height">400</option>
       <!-- use custom colors -->
       <option name="mapping.seriesColors">[0x5379af,0x9ac23c,0xf7902b,0x956d95,0x6ab7c7,0xd85d3c,0xfac51c,0xdd86af]</option>
       <!-- adjust marker opacity and size range -->
