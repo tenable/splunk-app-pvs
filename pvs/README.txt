@@ -16,8 +16,8 @@ Requirements:
   * You can obtain an NNM evaluation [here](https://www.tenable.com/products/nessus-network-monitor/evaluate).
 * Splunk 6.x or higher.
 
-All new NNM data will be tagged with the sourcetype tenable:nnm.
-All new PVS data will be tagged with the sourectype tenable:pvs.
+All new NNM data will be tagged with the sourcetype tenable:nnm.  
+All new PVS data will be tagged with the sourectype tenable:pvs.  
 All old PVS data with the sourcetype pvs, will still be included in dashboards and saved searches.  
 
 Configuration:
@@ -31,16 +31,14 @@ Configuration:
   * Set "Format Type" to Standard
   * Set Protocol to the protocol you have Splunk setup to accept syslog over
 
-Author Information:
+Author:
 ===================
-
 Author: Tenable, Inc.
-
+Support: support@tenable.com. 
 If you need assistance please check the [Tenable Community](https://community.tenable.com/community/tenable-community)
 
 
 Disclaimer:
 ===========
-
-NNM is the property of Tenable, Inc.
+Copyright 2017 Tenable, Inc.
 
