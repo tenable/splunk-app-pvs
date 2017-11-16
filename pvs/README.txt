@@ -12,47 +12,31 @@ The Tenable Nessus Network Monitor™ (NNM™), previously Passive Vulnerability
 Requirements:
 =============
 
-* Tenable NNM, version 4.x or higher. To obtain a NNM
-evalutation see: https://www.tenable.com/products/nessus-network-monitor/evaluate
+* Tenable NNM, version 4.x or higher. 
+  * You can obtain an NNM evaluation [here](https://www.tenable.com/products/nessus-network-monitor/evaluate).
 * Splunk 6.x or higher.
 
-A separate index will be created and used for PVS data. This is done for search 
-time performance, and it can also be used to control access to the data.
-
+All new NNM data will be tagged with the sourcetype tenable:nnm.
+All new PVS data will be tagged with the sourectype tenable:pvs.
+All old PVS data with the sourcetype pvs, will still be included in dashboards and saved searches.  
 
 Configuration:
 ==============
 
-From the NNM UI, go to “Configuration”. 
-
-Select Syslog in the "Setting Type" dropdown.
-
-Enter the IP and UDP port of the Splunk server in the "Realtime Syslog Server 
-List".
-
-Note: Must be entered as IP:PORT (e.g. 10.1.1.10:514).
-
-
-Configuring props.conf
-----------------------
-
-The Tenable NNM Splunk App is designed to communicate natively using a UDP 
-port on the Splunk Indexer with a sourcetype of [syslog]. This can be a shared 
-input using the sourcetype of [syslog], or if another port is to be used then a 
-new input can be added with the sourcetype of [pvs]. Refer to `props.conf` 
-located in the `$SPLUNK_HOME/etc/apps/pvs/default/props.conf` file which may need to be 
-altered to reflect the new configurations. More information on configuring the 
-`props.conf` file can be found at 
-http://docs.splunk.com/Documentation/Splunk/latest/Admin/Propsconf 
-
+* From the NNM UI, go to “Configuration”. 
+* Select Syslog in the "Setting Type" dropdown.
+* Click "Add" next to the "Realtime Syslog Server List"
+  * Set the "IP" you have Splunk setup to listen for syslog on
+  * Set the "Port" you have Splunk setup to listen for syslog on
+  * Set "Format Type" to Standard
+  * Set Protocol to the protocol you have Splunk setup to accept syslog over
 
 Author Information:
 ===================
 
 Author: Tenable, Inc.
 
-If you need assistance please check the Tenable Community: 
-https://community.tenable.com/community/tenable-community
+If you need assistance please check the [Tenable Community](https://community.tenable.com/community/tenable-community)
 
 
 Disclaimer:
