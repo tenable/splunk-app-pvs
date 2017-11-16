@@ -9,14 +9,14 @@
   <row>
     <chart>
       <searchString>
-      eventtype=nnm OR eventtype=pvs | eval service_name=dest_port."/".dest_svc | top service_name
+      eventtype=nnm | eval service_name=dest_port."/".dest_svc | top service_name
       </searchString>
       <title>Top Destination Port</title>
       <option name="charting.chart">pie</option>
     </chart>
     <chart>
       <searchString>
-      eventtype=nnm OR eventtype=pvs | eval service_name=src_port."/".src_svc | top service_name
+      eventtype=nnm | eval service_name=src_port."/".src_svc | top service_name
       </searchString>
       <title>Top Source Port</title>
       <option name="charting.chart">pie</option>
@@ -25,7 +25,7 @@
   <row>
     <table>
       <searchString>
-      eventtype=nnm OR eventtype=pvs | top dest
+      eventtype=nnm | top dest
       </searchString>
       <title>Top Destination IP</title>
       <option name="count">10</option>
@@ -33,7 +33,7 @@
     </table>
     <table>
       <searchString>
-      eventtype=nnm OR eventtype=pvs | top src limit=10
+      eventtype=nnm | top src limit=10
       </searchString>
       <title>Top Source IP</title>
       <option name="count">10</option>

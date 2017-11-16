@@ -4,8 +4,8 @@
     "title": "Tenable NNM previously PVS", 
     "id": {
       "group": null, 
-      "name": "splunk-app-pvs", 
-      "version": "1.5.0"
+      "name": "pvs", 
+      "version": "1.5.1"
     }, 
     "author": [
       {

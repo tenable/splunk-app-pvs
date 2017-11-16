@@ -1,11 +1,11 @@
 <nav color="#00A5B5" logo="appLogo.png">
     <view name="search"/>
     <collection label="Dashboards">
-        <view name="pvs_dashboard" default='true' />
-        <view name="pvs_traffic_overview" />
-        <view name="pvs_dashboard_maps" />
+        <view name="nnm_dashboard" default='true' />
+        <view name="nnm_traffic_overview" />
+        <view name="nnm_dashboard_maps" />
         <divider />
-        <view name="search_ip" />
+        <view name="nnm_search" />
     </collection>
     <collection label="Saved Searches">
         <saved source="unclassified" /> 

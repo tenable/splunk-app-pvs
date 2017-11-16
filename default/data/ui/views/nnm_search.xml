@@ -1,0 +1,36 @@
+<form>
+	<label>Search for NNM Events</label>
+
+	<fieldset autoRun="true">
+		<input type="text" token="ipaddr">
+			<label>IP Address</label>
+			<default>*</default>
+		</input>
+		<input type="text" token="plugin_name">
+			<label>NNM Plugin Name</label>
+			<default>*</default>
+		</input>
+		<input type="text" token="plugin_id">
+			<label>NNM Plugin ID</label>
+			<default>*</default>
+		</input>
+		<input type="time">
+			<default>Last 60 minutes</default>
+		</input>
+	</fieldset>
+
+	<row>
+		<chart>
+			<title>Events: $plugin_name$ / $ipaddr$</title>
+			<searchString><![CDATA[eventtype=nnm plugin_name="$plugin_name$" plugin_id="$plugin_id$" (src_ip="$ipaddr$" OR dest_ip="$ipaddr$") | timechart count by plugin_name]]></searchString>
+			<option name="charting.chart">area</option>
+			<option name="charting.chart.stackMode">stacked</option>
+		</chart>
+	</row>
+	<row>
+		<event>
+			<title>Events: $plugin_name$ / $ipaddr$</title>
+			<searchString><![CDATA[eventtype=nnm plugin_name="$plugin_name$" plugin_id="$plugin_id$" (src_ip="$ipaddr$" OR dest_ip="$ipaddr$")|head 100]]></searchString>
+		</event>
+	</row>
+</form>	
