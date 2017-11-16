@@ -1,7 +1,7 @@
 splunk-app-pvs
 ==============
 
-Tenable NNM App for Splunk
+Tenable NNM (previously PVS for) Splunk
 
 Introduction:
 =============
@@ -33,8 +33,8 @@ Configuration:
 
 Author:
 ===================
-Author: Tenable, Inc.
-Support: support@tenable.com. 
+Author: Tenable, Inc.  
+Support: support@tenable.com   
 If you need assistance please check the [Tenable Community](https://community.tenable.com/community/tenable-community)
 
 
