@@ -1,0 +1,47 @@
+<dashboard>
+	<label>Getting Started</label>
+	
+<row>
+<html>
+<h1>Welcome to the Tenable NNM App for Splunk</h1>
+
+<h2>Introduction</h2>
+<p>
+The Tenable Nessus Network Monitor™ (NNM™), previously Passive Vulnerability Scanner (PVS™), monitors network traffic at the packet layer to determine topology and identify services, security vulnerabilities, suspicious network relationships, and compliance violations.
+</p>
+
+<h2>Requirements</h2>
+
+<ol>
+<li>Tenable Nessus Network Monitor, Version 4.x or higher and Splunk 6.x and higher. </li>
+<li>A separate index will be created and used for NNM data. This is for search time performance, it can also be use to control access to the data.</li>
+</ol>
+
+<h3>Configuration</h3>
+
+<ol>
+	<li>From the NNM UI, go to Configuration. </li>
+	<li>Select Syslog in the "Setting Type" dropdown.</li>
+	<li>Enter the IP and UDP Port of the splunk server in the "Realtime Syslog Server List"</li>
+	<ul>Note: Must be entered as IP:PORT (e.g. 10.1.1.10:514)</ul>
+</ol>
+
+<h3>Configuring props.conf</h3>
+<p>
+The Tenable NNM Splunk App is designed to communicate natively using a UDP port on the Splunk Indexer with a sourcetype of [syslog]. This can be a shared input using the sourcetype of [syslog] or if another port is to be used then a new input can be added with the sourcetype of [pvs]. Refer to props.conf located in the SPLUNK%HOME/etc/apps/pvs/default/props.conf which may need to be altered to reflect the new configurations. More information on configuring the props.conf file can be found at <a href="http://docs.splunk.com/Documentation/Splunk/latest/Admin/Propsconf">props.conf.spec</a>
+</p>
+<hr />
+
+<h2>More Information</h2>
+
+<p>If you need assistance please check the community <a href="https://community.tenable.com/community/tenable-community">Tenable Community</a> </p>
+
+<hr />
+
+<h2>Disclaimer</h2>
+
+<p>NNM is the property of Tenable, Inc.</p>
+
+</html>
+</row>
+</dashboard>
