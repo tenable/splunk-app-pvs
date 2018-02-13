@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "2.0.0", 
+  "info": {
+    "title": "Tenable NNM (previously PVS) for Splunk", 
+    "id": {
+      "group": null, 
+      "name": "pvs", 
+      "version": "2.0.2"
+    }, 
+    "author": [
+      {
+        "name": "Tenable, Inc.", 
+        "email": null, 
+        "company": null
+      }
+    ], 
+    "releaseDate": null, 
+    "description": "The Tenable Nessus Network Monitor\u2122 (NNM\u2122), previously Passive Vulnerability Scanner (PVS\u2122), monitors network traffic at the packet layer to determine topology and identify services, security vulnerabilities, suspicious network relationships, and compliance violations.", 
+    "classification": {
+      "intendedAudience": null, 
+      "categories": [], 
+      "developmentStatus": null
+    }, 
+    "commonInformationModels": null, 
+    "license": {
+      "name": null, 
+      "text": null, 
+      "uri": null
+    }, 
+    "privacyPolicy": {
+      "name": null, 
+      "text": null, 
+      "uri": null
+    }, 
+    "releaseNotes": {
+      "name": null, 
+      "text": "./README.txt", 
+      "uri": null
+    }
+  }, 
+  "dependencies": null, 
+  "tasks": null, 
+  "inputGroups": null, 
+  "incompatibleApps": null, 
+  "platformRequirements": null, 
+  "supportedDeployments": [
+    "_standalone", 
+    "_distributed"
+  ], 
+  "targetWorkloads": null
+}
